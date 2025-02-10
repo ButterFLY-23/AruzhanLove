@@ -57,15 +57,6 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             max-width: 600px;
         }
-        .heart-beat {
-            margin-top: 20px;
-            font-size: 50px;
-            animation: beat 1s infinite;
-        }
-        @keyframes beat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
         .heart {
             position: fixed;
             color: #ec407a;
@@ -122,6 +113,7 @@
             heart.classList.add("heart");
             heart.innerHTML = "❤️";
             heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "-50px";
             heart.style.animationDuration = Math.random() * 2 + 3 + "s";
             heart.style.fontSize = Math.random() * 20 + 20 + "px";
             document.body.appendChild(heart);
@@ -129,7 +121,7 @@
                 heart.remove();
             }, 5000);
         }
-        setInterval(createHeart, 200);
+        setInterval(createHeart, 300);
     </script>
 </body>
 </html>
